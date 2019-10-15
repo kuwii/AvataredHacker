@@ -31,3 +31,9 @@ googleTrackId:
 
 # whether to show read more button when showing article in excerpt in main page
 read_more: false
+
+# whether to use a dynamic avatar or just show a static one
+# max_distance and sensitivity only work when dynamic_avatar is true
+dynamic_avatar: true
+max_distance: 15
+sensitivity: 0.01

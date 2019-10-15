@@ -1,27 +1,19 @@
 # Hacker | [English Docs](/README.md)
 [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badge/)  [![GPL Licence](https://badges.frapsoft.com/os/gpl/gpl.svg?v=103)](https://opensource.org/licenses/GPL-2.0)  
 
+**AvataredHacker**是一款Hexo博客主题，修改自[**CodeDaraW/Hacker**](https://github.com/CodeDaraW/Hacker)，在保持原主题总体风格简洁的情况下，尝试添加一些使网站和文章更有趣的小特效和功能。
 
-__Hacker 是一款专注于写作的简洁博客主题。在如此讲究复杂排版的趋势下，选择回归本源，专注于写作这件事。__  
-
-一开始是 [moyo](http://liuxinyu.me/) 为 Wordpress 所创作的一个主题，由 CodeDaraW 移植到 Hexo 。
-
-## Demo
-参考我的博客：[DaraW](http://blog.daraw.cn/)。  
-可以使用 TravisCI 实现自动化部署，配置参考 [CodeDaraW/Blog](https://github.com/CodeDaraW/Blog)。
-
-![](https://ooo.0o0.ooo/2016/08/04/57a306f56bee2.png
-)
 
 ## 安装
+
 获得主题文件， `git clone` 或者 `download zip` 均可；  
 
-在 `themes` 文件夹中创建文件夹 `Hacker` ，将主题文件都复制粘贴至 `Hacker` 文件夹；  
+在 `themes` 文件夹中创建文件夹 `AvataredHacker` ，将主题文件都复制粘贴至 `AvataredHacker` 文件夹；  
 
 然后在hexo全局配置文件 `_config.yml` 中应用主题：
 
 ```yaml
-theme: Hacker
+theme: AvataredHacker
 ```
 
 这样就安装好了，开始享受吧~
@@ -29,8 +21,44 @@ theme: Hacker
 __注意：版本更新后建议在hexo生成前执行一次 `hexo clean` ，清除以前的缓存，避免带来的一些莫名其妙的问题。__
 
 ## 配置
+
+参考 `_config.example.yml` 配置案例，创建主题配置文件 `_config.yml` 并编辑。
+
+### 配置头像
+
+如其名， **AvataredHacker** 使用一个头像取代了博客的主标题。头像可以一个静态图片，还可以是一个支持“看向鼠标”效果的动态头像。
+
+#### 使用动态头像
+
+在 `_config.yml` 中，有如下配置：
+
+```yaml
+dynamic_avatar: true
+max_distance: 15
+sensitivity: 0.01
+```
+
+`dynamic_avatar`: `boolean`，是否使用动态头像  
+`max_distance`: `number`，使用动态头像时，“眼球”可以移动的最大距离（使用静态头像时此项无效）
+`sensitivity`: `number`，使用动态头像时，“眼球”随鼠标移动的灵敏度（使用静态头像时此项无效）
+
+
+#### 更换头像
+
+主题文件中 `source/images` 文件夹内以 `avatar` 开头的为头像图片。
+
+如果希望使用静态头像，替换 `avatar.png` 即可。
+
+如果希望使用动态头像，需要替换如下两个文件：
+
+* `avatar_body.png`：头像本体（不包含“眼球”）
+* `avatar_eyeball`：看向鼠标的“眼球”
+
+在网页中，两张图片左上角对齐，“眼球”在上，“本体”在下叠加显示。
+
 ### 启用评论和谷歌分析
-参考 `_config.example.yml` 配置案例，创建主题配置文件 `_config.yml` 并编辑：
+
+在 `_config.yml` 中，有如下配置：
 
 ```yaml
 # gitment
@@ -115,3 +143,7 @@ menu:
 
 ## 协议
 GNU GPL(General Public License) v2.0
+
+## 修改说明
+
+本项目由 kuwii 修改自[**CodeDaraW/Hacker**](https://github.com/CodeDaraW/Hacker)。改动以及相应时间列在 [**CHANGELOG.md**](/README.md) 中。

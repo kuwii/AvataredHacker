@@ -1,27 +1,18 @@
 # Hacker | [中文版文档](/README_zh-CN.md)
 [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badge/)  [![GPL Licence](https://badges.frapsoft.com/os/gpl/gpl.svg?v=103)](https://opensource.org/licenses/GPL-2.0)  
 
-
-__Hacker is a simple blog theme focused on writing. In such a trend of complex typography, choose the return to origins, focusing on writing this matter.__  
-
-The beginning is [moyo](http://liuxinyu.me/) created a theme of Wordpress , by DaraW transplanted to Hexo.
-
-## Demo
-You can refer to my blog: [DaraW](http://blog.daraw.cn/).  
-Also, you can try auto-deployment with TravisCI, refer to [CodeDaraW/Blog](https://github.com/CodeDaraW/Blog)。
-
-![](https://ooo.0o0.ooo/2016/08/04/57a306f56bee2.png
-)
+**AvataredHacker** is a theme for Hexo, modified from [**CodeDaraW/Hacker**](https://github.com/CodeDaraW/Hacker), which tries to add some small effects and features that make the blog and articles funny while keeping the theme simple.
 
 ## Installation
+
 Firstly get the theme files, `git clone` or `download zip` both are ok.  
 
-Create a folder named `Hacker` in the folder `themes`, and copy all the theme files to the folder `Hacker`.  
+Create a folder named `AvataredHacker` in the folder `themes`, and copy all the theme files to the folder `AvataredHacker`.  
 
 Then apply the theme in the hexo global configuration file `_config.yml`:
 
 ```yaml
-theme: Hacker
+theme: AvataredHacker
 ```
 Now all are in order, just enjoy~
 
@@ -29,9 +20,44 @@ __Notice: After every update, you'd better run command `hexo clean` to clean cac
 
 
 ## Configure
-### Enable comments and Google Analytics
+
 Refering to the example configuration file `_config.example.yml`, 
-create the theme configuration file `_config.yml` and edit it:
+create the theme configuration file `_config.yml` and edit it.
+
+### Configure Avatar
+
+As its name, **AvataredHacker** replaces the main title of the blog with an avatar, which can be a static image, or a dynamic avatar that supports the effect of "looking at the pointer".
+
+#### Use Dynamic Avatar
+
+In `_config.yml`, there should be configurations as follows:
+
+```yaml
+dynamic_avatar: true
+max_distance: 15
+sensitivity: 0.01
+```
+
+`dynamic_avatar`: `boolean`，use dynamic avatar or not  
+`max_distance`: `number`，maximum distance the "eyeball" can move when use dynamic avatar (Useless when using static avatar)
+`sensitivity`: `number`，sensitivity of "eyeball" when the pointer moves (Uselesswhen using static avatar)
+
+#### Update Avatar
+
+Pictures whose name start with `avatar` in folder `source/images` of theme files are avatar pictures. 
+
+If you want to use static avatar, just replace `avatar.png`.
+
+If you want to use dynamic avatar, replace the following two files:
+
+* `avatar_body.png`: "body" of the avatar (without the "eyeball")
+* `avatar_eyeball`: "eyeball" that look at the pointer
+
+In the page, the top left corners of the two images are aligned, the "eyeball" is on the top, and the "body" is on the bottom.
+
+### Enable Comments and Google Analytics
+
+In `_config.yml`, there should be configurations as follows:
 
 ```yaml
 # gitment
@@ -115,3 +141,7 @@ menu:
 
 ## License
 GNU GPL(General Public License) v2.0
+
+## Statement of Changes
+
+This project is modified from [**CodeDaraW/Hacker**](https://github.com/CodeDaraW/Hacker) by kuwii. Changes and relavent dates are listed at [**CHANGELOG.md**](/README.md).

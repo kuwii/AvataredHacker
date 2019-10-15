@@ -2,17 +2,22 @@
   <meta charset="utf-8">
   <%
     var title = [];
+    var push_subtitle = true;
     if (page.current > 1) {
       title.push(__('page', page.current));
+      push_subtitle = false;
     }
     if (page.title) {
       title.push(page.title);
+      push_subtitle = false;
     }
     if (page.category) {
       title.push(page.category);
+      push_subtitle = false;
     }
     if (page.tag) {
       title.push(page.tag);
+      push_subtitle = false;
     }
     if (page.archive){
       if (page.year) {
@@ -20,11 +25,12 @@
       } else {
         title.push(__('archive_a'));
       }
+      push_subtitle = false;
     }
-    title.push(config.title);
-    if (config.subtitle) {
+    if (config.subtitle && push_subtitle) {
       title.push(config.subtitle);
     }
+    title.push(config.title);
   %>
   <title><%= title.join(' | ') %></title>
 

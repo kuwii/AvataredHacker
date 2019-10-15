@@ -1,0 +1,9 @@
+<% if (theme.dynamic_avatar){ %>
+  <script>
+    var avatarSettings = {
+      maxDistance: "<%- theme.max_distance %>",
+      sensitivity: "<%- theme.sensitivity %>",
+    }
+  </script>
+  <script src="<%- config.root %>js/avatar.js"></script>
+<% } %>

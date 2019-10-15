@@ -1,15 +1,22 @@
 <header>
-  <div class="site-branding">
-    <h1 class="site-title">
-      <a href="<%- config.root %>"><%= config.title %></a>
-    </h1>
-    <p class="site-description"><% if (config.subtitle){ %><%= config.subtitle %><% } %></p>
-  </div>
-  <nav class="site-navigation">
-    <ul>
-      <% for (var i in theme.menu){ %>
-        <li><a href="<%- url_for(theme.menu[i]) %>"><%= __(i) %></a></li>
-      <% } %>
-    </ul>
-  </nav>
-</header>
+    <div class="site-branding">
+      <h1 class="site-avatar">
+        <div>
+          <% if (theme.dynamic_avatar) { %>
+            <a href="<%- config.root %>"><img src="/images/avatar_body.png" /></a>
+            <a href="<%- config.root %>"><img id="avatar-eyeball" src="/images/avatar_eyeball.png" /></a>
+          <% } else { %>
+            <a href="<%- config.root %>"><img src="/images/avatar.png" /></a>
+          <% } %>
+        </div>
+      </h1>
+      <p class="site-description"><% if (config.subtitle){ %><%= config.subtitle %><% } %></p>
+    </div>
+    <nav class="site-navigation">
+      <ul>
+        <% for (var i in theme.menu){ %>
+          <li><a href="<%- url_for(theme.menu[i]) %>"><%= __(i) %></a></li>
+        <% } %>
+      </ul>
+    </nav>
+  </header>
