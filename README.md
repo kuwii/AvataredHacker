@@ -1,4 +1,4 @@
-# Hacker | [中文版文档](/README_zh-CN.md)
+# AvataredHacker | [中文版文档](/README_zh-CN.md)
 [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badge/)  [![GPL Licence](https://badges.frapsoft.com/os/gpl/gpl.svg?v=103)](https://opensource.org/licenses/GPL-2.0)  
 
 **AvataredHacker** is a theme for Hexo, modified from [**CodeDaraW/Hacker**](https://github.com/CodeDaraW/Hacker), which tries to add some small effects and features that make the blog and articles funny while keeping the theme simple.

@@ -1,4 +1,4 @@
-# Hacker | [English Docs](/README.md)
+# AvataredHacker | [English Docs](/README.md)
 [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badge/)  [![GPL Licence](https://badges.frapsoft.com/os/gpl/gpl.svg?v=103)](https://opensource.org/licenses/GPL-2.0)  
 
 **AvataredHacker**是一款Hexo博客主题，修改自[**CodeDaraW/Hacker**](https://github.com/CodeDaraW/Hacker)，在保持原主题总体风格简洁的情况下，尝试添加一些使网站和文章更有趣的小特效和功能。
