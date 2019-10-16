@@ -1,0 +1,3 @@
+[submodule "themes/AvataredHacker"]
+	path = themes/AvataredHacker
+	url = git@github.com:kuwii/AvataredHacker.git
