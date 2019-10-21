@@ -1,36 +1,36 @@
-# AvataredHacker | [中文版文档](/README_zh-CN.md)
+# AvataredHacker
 [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badge/)  [![GPL Licence](https://badges.frapsoft.com/os/gpl/gpl.svg?v=103)](https://opensource.org/licenses/GPL-2.0)  
 
-**AvataredHacker** is a theme for Hexo, modified from [**CodeDaraW/Hacker**](https://github.com/CodeDaraW/Hacker), which tries to add some small effects and features that make the blog and articles funny while keeping the theme simple.
+**AvataredHacker**是一款Hexo博客主题，修改自[**CodeDaraW/Hacker**](https://github.com/CodeDaraW/Hacker)，在保持原主题总体风格简洁的情况下，尝试添加一些使网站和文章更有趣的小特效和功能。
 
-## Installation
 
-Firstly get the theme files, `git clone` or `download zip` both are ok.  
+## 安装
 
-Create a folder named `AvataredHacker` in the folder `themes`, and copy all the theme files to the folder `AvataredHacker`.  
+获得主题文件， `git clone` 或者 `download zip` 均可；  
 
-Then apply the theme in the hexo global configuration file `_config.yml`:
+在 `themes` 文件夹中创建文件夹 `AvataredHacker` ，将主题文件都复制粘贴至 `AvataredHacker` 文件夹；  
+
+然后在hexo全局配置文件 `_config.yml` 中应用主题：
 
 ```yaml
 theme: AvataredHacker
 ```
-Now all are in order, just enjoy~
 
-__Notice: After every update, you'd better run command `hexo clean` to clean cache files before Hexo generating, in case of some problems cache files bring.__
+这样就安装好了，开始享受吧~
 
+__注意：版本更新后建议在hexo生成前执行一次 `hexo clean` ，清除以前的缓存，避免带来的一些莫名其妙的问题。__
 
-## Configure
+## 配置
 
-Refering to the example configuration file `_config.example.yml`, 
-create the theme configuration file `_config.yml` and edit it.
+参考 `_config.example.yml` 配置案例，创建主题配置文件 `_config.yml` 并编辑。
 
-### Configure Avatar
+### 配置头像
 
-As its name, **AvataredHacker** replaces the main title of the blog with an avatar, which can be a static image, or a dynamic avatar that supports the effect of "looking at the pointer".
+如其名， **AvataredHacker** 使用一个头像取代了博客的主标题。头像可以一个静态图片，还可以是一个支持“看向鼠标”效果的动态头像。
 
-#### Use Dynamic Avatar
+#### 使用动态头像
 
-In `_config.yml`, there should be configurations as follows:
+在 `_config.yml` 中，有如下配置：
 
 ```yaml
 dynamic_avatar: true
@@ -38,26 +38,27 @@ max_distance: 15
 sensitivity: 0.01
 ```
 
-`dynamic_avatar`: `boolean`，use dynamic avatar or not  
-`max_distance`: `number`，maximum distance the "eyeball" can move when use dynamic avatar (Useless when using static avatar)
-`sensitivity`: `number`，sensitivity of "eyeball" when the pointer moves (Uselesswhen using static avatar)
+`dynamic_avatar`: `boolean`，是否使用动态头像  
+`max_distance`: `number`，使用动态头像时，“眼球”可以移动的最大距离（使用静态头像时此项无效）
+`sensitivity`: `number`，使用动态头像时，“眼球”随鼠标移动的灵敏度（使用静态头像时此项无效）
 
-#### Update Avatar
 
-Pictures whose name start with `avatar` in folder `source/images` of theme files are avatar pictures. 
+#### 更换头像
 
-If you want to use static avatar, just replace `avatar.png`.
+主题文件中 `source/images` 文件夹内以 `avatar` 开头的为头像图片。
 
-If you want to use dynamic avatar, replace the following two files:
+如果希望使用静态头像，替换 `avatar.png` 即可。
 
-* `avatar_body.png`: "body" of the avatar (without the "eyeball")
-* `avatar_eyeball`: "eyeball" that look at the pointer
+如果希望使用动态头像，需要替换如下两个文件：
 
-In the page, the top left corners of the two images are aligned, the "eyeball" is on the top, and the "body" is on the bottom.
+* `avatar_body.png`：头像本体（不包含“眼球”）
+* `avatar_eyeball`：看向鼠标的“眼球”
 
-### Enable Comments and Google Analytics
+在网页中，两张图片左上角对齐，“眼球”在上，“本体”在下叠加显示。
 
-In `_config.yml`, there should be configurations as follows:
+### 启用评论和谷歌分析
+
+在 `_config.yml` 中，有如下配置：
 
 ```yaml
 # gitment
@@ -88,49 +89,50 @@ disqus_shortname:
 googleTrackId:
 ```
 
-`gitment`: `boolean`，use gitment or not  
-`gitment_owner`: `string`，your GitHub ID  
-`gitment_repo`: `string`，the repo to store comment data  
-`gitment_client_id`: `string`，your client ID  
-`gitment_client_secret`: `string`，your client secret  
+`gitment`: `boolean`，是否开启 Gitment 评论  
+`gitment_owner`: `string`，你的 GitHub ID  
+`gitment_repo`: `string`，存储评论的 Repo  
+`gitment_client_id`: `string`，你的 Client ID  
+`gitment_client_secret`: `string`，你的 Client Secret  
 
-`gitalk`: `boolean`，use gitalk or not  
-`gitalk_owner`: `string`，your GitHub ID  
-`gitalk_admin`: `array`，all the admin GitHub IDs  
-`gitalk_repo`: `string`，the repo to store comment data 
-`gitalk_client_id`: `string`，your client ID 
-`gitalk_client_secret`: `string`，your client secret  
+`gitalk`: `boolean`，是否开启 Gitalk 评论  
+`gitalk_owner`: `string`，你的 GitHub ID  
+`gitalk_admin`: `array`，所有管理员 GitHub ID  
+`gitalk_repo`: `string`，存储评论的 Repo  
+`gitalk_client_id`: `string`，你的 Client ID  
+`gitalk_client_secret`: `string`，你的 Client Secret  
 
+`valine`: `boolean`，是否开启 Valine 评论  
+`leancloud_id`: `string`，你的 LeanCloud ID  
+`leancloud_key`: `string`，你的 LeanCloud Key  
 
-`valine`: `boolean`, use Valine or not  
-`leancloud_id`: `string`, your leancloud ID  
-`leancloud_key`: `string`, your leancloud Key  
+`disqus`: `boolean`，是否开启 Disqus 评论；  
+`disqus_shortname`: `string`，你的 Disqus Site Shortname。  
 
-`disqus`: `boolean`, use disqus or not;  
-`disqus_shortname`: your disqus site shortname.
+`googleTrackId`: `string`，为谷歌分析的个人ID，留空则为不使用谷歌分析。
 
-`googleTrackId`: your Google Analytics ID, Hacker will not use Google Analytics if it's empty.
+### 启用分类和标签页面
+分类功能：执行 `hexo new page categories` ，然后修改生成的 `source/categories/index.md` ：
 
-### Enable Categories and Tags pages
-Categories Page: run `hexo new page categories`，then modify the generated file `source/categories/index.md`：
 ``` markdown
 title: categories
 date: 2017-01-30 19:16:17
 layout: "categories"
 ---  
 ```
-If you need to close comments of this page , you can add a line `comments: false`; `title` corresponds to the title of the page.
 
-Tags Page: run `hexo new page tags`，then modify the generated file `source/tags/index.md`：
+如果你需要关闭该页的评论，可以添加一行 `comments: false`；`title` 对应的则是该页的标题。  
+
+标签功能：同理，执行 `hexo new page tags` ，然后修改生成的 `source/tags/index.md` ：
 ``` markdown
 title: tags
 date: 2017-01-30 19:16:17
 layout: "tags"
 ---  
 ```
-Configuration is the same as Categories Page.  
+配置同分类功能。
 
-Add links to the menu: Edit the `_config.yml` file of the theme, add `Categories: /categories` and `Tags: /tags` in `menu` like this：
+在菜单中添加链接：编辑主题的 `_config.yml` ，在 `menu` 中添加 `Categories: /categories` 和 `Tags: /tags`，如下：
 ``` yml
 menu:
   Home: /
@@ -139,9 +141,9 @@ menu:
   Tags: /tags
 ```
 
-## License
+## 协议
 GNU GPL(General Public License) v2.0
 
-## Statement of Changes
+## 修改说明
 
-This project is modified from [**CodeDaraW/Hacker**](https://github.com/CodeDaraW/Hacker) by kuwii. Changes and relavent dates are listed at [**CHANGELOG.md**](/README.md).
+本项目由 kuwii 修改自[**CodeDaraW/Hacker**](https://github.com/CodeDaraW/Hacker)。改动以及相应时间列在 [**CHANGELOG.md**](/README.md) 中。
