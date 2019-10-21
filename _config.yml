@@ -37,3 +37,7 @@ read_more: false
 dynamic_avatar: true
 max_distance: 15
 sensitivity: 0.01
+
+# mathjax settings
+# to configure more details, plese modify layout/components/setMathJax.ejs
+mathjax: true
