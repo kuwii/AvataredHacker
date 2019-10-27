@@ -66,7 +66,12 @@ mathjax: true
 
 `mathjax`: `boolean`, 是否启用MathJax支持
 
-由于MathJax的精细配置较为复杂，在`_config.yml`中造一个yaml的轮子有点没必要（主要是懒…），因此如需详细定制，请修改`layout/components/setMathjax.ejs`。详细修改方法请参阅[官方文档](http://docs.mathjax.org/en/latest/index.html)。
+由于MathJax的精细配置较为复杂，在`_config.yml`中造一个yaml的轮子有点没必要（主要是懒…），因此如需详细定制，可以修改：
+
+* `layout/components/_config_mathjax_cdn.ejs`：配置CDN
+* `layout/components/_config_mathjax`：MathJax的详细配置
+
+详细配置项可参阅[官方文档](http://docs.mathjax.org/en/latest/index.html)。
 
 ### 启用评论和谷歌分析
 
