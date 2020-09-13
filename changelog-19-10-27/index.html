@@ -1,0 +1,212 @@
+<!DOCTYPE HTML>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+  <title>Changelog 19.10.27：拆分MathJax配置文件 | AvataredHacker Demo</title>
+
+  
+  <meta name="author" content="kuwii">
+  
+
+  
+  <meta name="description" content="之前加载 MathJax 是在layout/components/setMathjax.ejs里实现的，考虑到日后有修改这个文件的可能，为了不影响用户自定义配置，就把配置拆了出来形成了下面两个文件：
+
+layout/components/_config_mathjax_cdn.ejs：用于配置选择最">
+  
+
+  
+  
+  <meta name="keywords" content="feature,changelog,mathjax">
+  
+
+  <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+  <meta property="og:title" content="Changelog 19.10.27：拆分MathJax配置文件">
+
+  <meta property="og:site_name" content="AvataredHacker Demo">
+
+  
+  <meta property="og:image" content="/AvataredHacker/favicon.ico">
+  
+
+  <link href="/AvataredHacker/favicon.ico" rel="icon">
+  <link rel="alternate" href="/AvataredHacker/atom.xml" title="AvataredHacker Demo" type="application/atom+xml">
+  <link rel="stylesheet" href="/AvataredHacker/css/style.css" media="screen" type="text/css">
+</head>
+
+
+<body>
+<div class="blog">
+  <div class="content">
+
+    <header>
+    <div class="site-branding">
+      <h1 class="site-avatar">
+        <div>
+          
+            <a href="/AvataredHacker/"><img src="/AvataredHacker/images/avatar_body.png" /></a>
+            <a href="/AvataredHacker/"><img id="avatar-eyeball" src="/AvataredHacker/images/avatar_eyeball.png" /></a>
+          
+        </div>
+      </h1>
+      <p class="site-description">hello, world</p>
+    </div>
+    <nav class="site-navigation">
+      <ul>
+        
+          <li><a href="/AvataredHacker/">主页</a></li>
+        
+          <li><a href="/AvataredHacker/archives">归档</a></li>
+        
+          <li><a href="/AvataredHacker/categories">分类</a></li>
+        
+          <li><a href="/AvataredHacker/tags">标签</a></li>
+        
+          <li><a href="/AvataredHacker/about">关于</a></li>
+        
+      </ul>
+    </nav>
+  </header>
+
+
+    <main class="site-main posts-loop">
+    <article>
+
+  
+    
+    <h3 class="article-title"><span>Changelog 19.10.27：拆分MathJax配置文件</span></h3>
+    
+  
+
+  <div class="article-top-meta">
+    <span class="posted-on">
+      <a href="/AvataredHacker/changelog-19-10-27/" rel="bookmark">
+        <time class="entry-date published" datetime="2019-10-26T16:00:00.000Z">
+          2019-10-27
+        </time>
+      </a>
+    </span>
+  </div>
+
+
+  
+
+  <div class="article-content">
+    <div class="entry">
+      
+        <p>之前加载 MathJax 是在<code>layout/components/setMathjax.ejs</code>里实现的，考虑到日后有修改这个文件的可能，为了不影响用户自定义配置，就把配置拆了出来形成了下面两个文件：</p>
+<ul>
+<li><code>layout/components/_config_mathjax_cdn.ejs</code>：用于配置选择最快的CDN</li>
+<li><code>layout/components/_config_mathjax.ejs</code>：用于MathJax的配置</li>
+</ul>
+<p>这样后面如果有东西需要改的话，这两个配置文件是不会受影响的。</p>
+<p>不过想想，好像也没啥需要再改的了……</p>
+
+      
+    </div>
+
+  </div>
+
+  <div class="article-footer">
+    <div class="article-meta pull-left">
+
+    
+      
+
+    <span class="post-categories">
+      <i class="icon-categories"></i>
+        <a href="/AvataredHacker/categories/features/">features</a>
+    </span>
+    
+
+    
+    
+
+    <span class="post-tags">
+      <i class="icon-tags"></i>
+        <a href="/AvataredHacker/tags/feature/">feature</a><a href="/AvataredHacker/tags/changelog/">changelog</a><a href="/AvataredHacker/tags/mathjax/">mathjax</a>
+    </span>
+    
+
+    </div>
+
+    
+  </div>
+</article>
+
+  
+
+
+
+
+
+
+    </main>
+
+    <footer class="site-footer">
+  <p class="site-info">
+    Proudly powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and
+    Theme by <a href="https://github.com/kuwii/AvataredHacker" target="_blank">AvataredHacker</a>
+    </br>
+    
+    &copy; 2020 kuwii
+    
+  </p>
+</footer>
+    
+    
+  <script>
+    var avatarSettings = {
+      maxDistance: "15",
+      sensitivity: "0.01",
+    }
+  </script>
+  <script src="/AvataredHacker/js/avatar.js"></script>
+
+    
+  
+<script>
+  MathJax = {
+    tex: {
+      packages: ['base'],
+      inlineMath: [
+        ['\\(', '\\)']
+      ],
+      displayMath: [
+        ['$$', '$$'],
+        ['\\[', '\\]']
+      ],
+      processEscapes: true,
+      processEnvironments: true,
+      processRefs: true,
+      digits: /^(?:[0-9]+(?:\{,\}[0-9]{3})*(?:\.[0-9]*)?|\.[0-9]+)/,
+      tags: 'none',
+      tagSide: 'right',
+      tagIndent: '0.8em',
+      useLabelIds: true,
+      multlineWidth: '85%',
+      maxMacros: 1000,
+      maxBuffer: 5 * 1024,
+      baseURL: (document.getElementsByTagName('base').length === 0) ? '' : String(document.location).replace(/#.*$/, '')
+    },
+    mml: {
+      parseAs: 'html',
+      forceReparse: false,
+      parseError: function (node) {
+        this.error(this.adaptor.textContent(node).replace(/\n.*/g, ''));
+      }
+    }
+  };
+</script>
+
+  <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-svg.js"></script>
+
+
+    
+  </div>
+</div>
+</body>
+</html>
