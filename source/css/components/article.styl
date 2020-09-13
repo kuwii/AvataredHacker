@@ -2,6 +2,11 @@ $hackerBlue = #00A1F1
 $hackerGray = #9e9e9e
 $articleTitleColor = #212121
 $articleTextColor = #424242
+$articleCodeColor = #0080c0
+
+$articleTitleDarkColor = #f6f2f5
+$articleTextDarkColor = #fff
+$articleCodeDarkColor = #66CCFF
 
 article
   position relative
@@ -46,7 +51,7 @@ article
         box-shadow inset 0 -2px 0 rgba(240, 56, 56, 0)
 
       &:hover
-        color #00A1F1
+        color $hackerBlue
 
   .article-top-meta
     position relative
@@ -133,7 +138,7 @@ article
     padding 2px 4px
     margin-left 2px
     margin-right 2px
-    color #0080c0
+    color $articleCodeColor
     white-space normal
     border-radius 0
 
@@ -190,3 +195,22 @@ article
     pre
       overflow-x auto
       overflow-y hidden
+
+@media (prefers-color-scheme dark)
+  article
+    color $articleTitleDarkColor
+
+    .article-title
+      color $articleTitleDarkColor
+
+      a
+        color $articleTitleDarkColor
+
+        &:hover
+          color $hackerBlue
+
+    .article-excerpt, .article-content, .featured-media
+      color $articleTextDarkColor
+
+    code
+      color $articleCodeDarkColor

@@ -104,29 +104,33 @@ disqus_shortname:
 
 # google analytics
 googleTrackId:
+
+# baidu analytics
+baiduTrackId:
 ```
 
-`gitment`: `boolean`，是否开启 Gitment 评论  
-`gitment_owner`: `string`，你的 GitHub ID  
-`gitment_repo`: `string`，存储评论的 Repo  
-`gitment_client_id`: `string`，你的 Client ID  
-`gitment_client_secret`: `string`，你的 Client Secret  
+`gitment`: `boolean`，是否开启 Gitment 评论
+`gitment_owner`: `string`，你的 GitHub ID
+`gitment_repo`: `string`，存储评论的 Repo
+`gitment_client_id`: `string`，你的 Client ID
+`gitment_client_secret`: `string`，你的 Client Secret
 
-`gitalk`: `boolean`，是否开启 Gitalk 评论  
-`gitalk_owner`: `string`，你的 GitHub ID  
-`gitalk_admin`: `array`，所有管理员 GitHub ID  
-`gitalk_repo`: `string`，存储评论的 Repo  
-`gitalk_client_id`: `string`，你的 Client ID  
-`gitalk_client_secret`: `string`，你的 Client Secret  
+`gitalk`: `boolean`，是否开启 Gitalk 评论
+`gitalk_owner`: `string`，你的 GitHub ID
+`gitalk_admin`: `array`，所有管理员 GitHub ID
+`gitalk_repo`: `string`，存储评论的 Repo
+`gitalk_client_id`: `string`，你的 Client ID
+`gitalk_client_secret`: `string`，你的 Client Secret
 
-`valine`: `boolean`，是否开启 Valine 评论  
-`leancloud_id`: `string`，你的 LeanCloud ID  
-`leancloud_key`: `string`，你的 LeanCloud Key  
+`valine`: `boolean`，是否开启 Valine 评论
+`leancloud_id`: `string`，你的 LeanCloud ID
+`leancloud_key`: `string`，你的 LeanCloud Key
 
-`disqus`: `boolean`，是否开启 Disqus 评论；  
-`disqus_shortname`: `string`，你的 Disqus Site Shortname。  
+`disqus`: `boolean`，是否开启 Disqus 评论
+`disqus_shortname`: `string`，你的 Disqus Site Shortname
 
-`googleTrackId`: `string`，为谷歌分析的个人ID，留空则为不使用谷歌分析。
+`googleTrackId`: `string`，为谷歌分析的个人ID，留空则为不使用谷歌分析
+`baiduTrackId`: `string`, 为百度统计的个人ID,留空则为不使用百度统计
 
 ### 启用分类和标签页面
 分类功能：执行 `hexo new page categories` ，然后修改生成的 `source/categories/index.md` ：
