@@ -2,6 +2,9 @@
 
 ## AvataredHacker
 
+### 20.09.13
+* 同步了官方（[CodeDaraW/Hacker](https://github.com/CodeDaraW/Hacker)）1.4.0版本暗黑模式的更新
+
 ### 19.10.31
 * 修复了一个拆分MathJax配置文件时的愚蠢错误 ~~（我太菜了）~~
 
